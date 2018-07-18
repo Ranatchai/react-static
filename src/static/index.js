@@ -333,6 +333,8 @@ export const exportRoutes = async ({ config, clientStats }) => {
                   key={`clientScript_${script}`}
                   rel="preload"
                   as="script"
+                  media="none"
+                  onLoad="if(media!='all')media='all'"
                   href={`${config.publicPath}${script}`}
                 />
               ))}
@@ -343,6 +345,8 @@ export const exportRoutes = async ({ config, clientStats }) => {
                   key={`clientStyleSheet_${styleSheet}`}
                   rel="preload"
                   as="style"
+                  media="none"
+                  onLoad="if(media!='all')media='all'"
                   href={`${config.publicPath}${styleSheet}`}
                 />
               ))}
@@ -352,6 +356,8 @@ export const exportRoutes = async ({ config, clientStats }) => {
                 <link
                   key={`clientStyleSheet_${styleSheet}`}
                   rel="stylesheet"
+                  media="none"
+                  onLoad="if(media!='all')media='all'"
                   href={`${config.publicPath}${styleSheet}`}
                 />
               ))}
