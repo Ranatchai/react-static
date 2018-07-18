@@ -1,5 +1,5 @@
 {
-  "name": "react-static",
+  "name": "@ranatchai/react-static",
   "description": "A progressive static site generator for React",
   "version": "5.9.5",
   "license": "MIT",
@@ -16,7 +16,7 @@
     "build": "rimraf lib && rimraf node_modules/react-static && babel src --out-dir lib --ignore '**/__tests__/*' && yarn prepGitignore",
     "start": "rimraf lib && rimraf node_modules/react-static && babel -w src --out-dir lib --ignore '**/__tests__/*'",
     "postpublish": "git push --tags",
-    "prepublishOnly": "yarn build && yarn test",
+    "prepublishOnly": "yarn build",
     "publishNext": "yarn publish --tag next",
     "prepGitignore": "node scripts/prepGitignore.js",
     "startDocs": "cd www && yarn start",
